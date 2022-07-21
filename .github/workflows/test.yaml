@@ -37,8 +37,8 @@ jobs:
         runs-on: self-hosted
         name: HCL OneTest Server
         steps:
-         - name: Execute Test
-           uses: SonaHJ/OTSAction@main
+         - name: RPT Action
+           uses: SonaHJ/OTSAction@OTS_Release
            with:
             serverUrl: '${{ github.event.inputs.server_url }}'
             offlineToken: '${{ github.event.inputs.offline_token }}'
