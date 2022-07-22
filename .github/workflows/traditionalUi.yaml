@@ -1,4 +1,4 @@
-name: WebUI Action
+name: HCL OneTest UI
 
 on:
     workflow_dispatch:
@@ -9,15 +9,27 @@ on:
             suite:
                 description: 'Test Suite Name'
                 required: true
+            logformat:
+                description: 'Log Format'
+                required: false
+            userargs:
+                description: 'User Arguments'
+                required: false
+            itercount:
+                description: 'Iteration Count'
+                required: false
 
 jobs:
 
-    WebUI-Action:
+    UI-Action:
         runs-on: self-hosted
-        name: Execute WebUI Test
+        name: HCL OneTest UI
         steps:
          - name: Execute Test
            uses: SonaHJ/TraditionalUIAction@main
            with:
             projectdir: '${{ github.event.inputs.projectdir }}'
             suite: '${{ github.event.inputs.suite }}'
+            logformat: '${{ github.event.inputs.logformat }}'
+            userargs: '${{ github.event.inputs.userargs }}'
+            itercount: '${{ github.event.inputs.itercount }}'
