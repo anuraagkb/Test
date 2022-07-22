@@ -22,7 +22,6 @@ jobs:
          - name: Execute Test
            uses: SonaHJ/TraditionalUIAction@main
            with:
-            productpath: '${{ github.event.inputs.productpath }}'
             projectdir: '${{ github.event.inputs.projectdir }}'
             suite: '${{ github.event.inputs.suite }}'
             logformat: '${{ github.event.inputs.logformat }}'
