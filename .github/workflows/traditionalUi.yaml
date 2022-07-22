@@ -3,9 +3,6 @@ name: WebUI Action
 on:
     workflow_dispatch:
         inputs:
-            productpath:
-                description: 'Product Path'
-                required: false
             projectdir:
                 description: 'Project Directory'
                 required: false
