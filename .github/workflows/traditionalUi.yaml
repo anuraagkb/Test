@@ -9,9 +9,6 @@ on:
             suite:
                 description: 'Test Suite Name'
                 required: true
-            logformat:
-                description: 'Test Suite Name'
-                required: true
 
 jobs:
 
@@ -24,4 +21,3 @@ jobs:
            with:
             projectdir: '${{ github.event.inputs.projectdir }}'
             suite: '${{ github.event.inputs.suite }}'
-            logformat: '${{ github.event.inputs.logformat }}'
